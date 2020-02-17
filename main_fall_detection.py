@@ -86,4 +86,6 @@ while(1):
     # Run NN on the input
     y = model_mobilenet_fall.predict(flow_transpose)
     y_all.append(y)
+    if y == 1:
+        publish_to_aws_sns(1)
     
